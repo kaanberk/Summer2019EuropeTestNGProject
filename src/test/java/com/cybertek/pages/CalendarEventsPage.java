@@ -13,7 +13,6 @@ public class CalendarEventsPage extends BasePage {
     }
 
     @FindBy(css = "[title='Create Calendar event']")
-
     public WebElement createCalendarEvent;
 
 }
