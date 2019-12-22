@@ -9,24 +9,45 @@ public class NegativeLoginTestWithReport extends TestBase {
 
     @Test
     public void  wrongPPasswordTes(){
+        //name of the test for report
+        extentLogger = report.createTest("Wrong Password Test");
 
-        //how to use pageobject model locators?
         LoginPage loginPage = new LoginPage();
-
         loginPage.usernameInput.sendKeys("user1");
-        loginPage.passwordInput.sendKeys("somepassword123");
-        loginPage.loginBtn.click();
+        extentLogger.info("Enter username");
 
+        loginPage.passwordInput.sendKeys("somepassword");
+        extentLogger.info("Enter Password");
+
+        loginPage.loginBtn.click();
+        extentLogger.info("Click login button");
+
+        extentLogger.info("Verify page url");
         Assert.assertEquals(driver.getCurrentUrl(),"https://qa3.vytrack.com/user/login");
+        //we put after assertion so if the assertion fails, it will not send pass to report
+
+        extentLogger.pass("PASS:Wrong Password Test");
     }
     @Test
     public void wrongUsername(){
-        LoginPage loginPage = new LoginPage();
-        loginPage.usernameInput.sendKeys("someusername");
-        loginPage.passwordInput.sendKeys("UserUser123");
-        loginPage.loginBtn.click();
+        //name of the test for report
+        extentLogger = report.createTest("Wrong Username Test");
 
+        LoginPage loginPage = new LoginPage();
+        loginPage.usernameInput.sendKeys("user1");
+        extentLogger.info("Enter username: user1");
+
+        loginPage.passwordInput.sendKeys("somepassword");
+        extentLogger.info("Enter Password: somepassword");
+
+        loginPage.loginBtn.click();
+        extentLogger.info("Click login button");
+
+        extentLogger.info("Verify page url");
         Assert.assertEquals(driver.getCurrentUrl(),"https://qa3.vytrack.com/user/login");
+        //we put after assertion so if the assertion fails, it will not send pass to report
+
+        extentLogger.pass("PASS:Wrong Password Test");
     }
 
 }

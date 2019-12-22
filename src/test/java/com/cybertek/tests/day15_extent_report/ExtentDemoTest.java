@@ -14,8 +14,6 @@ public class ExtentDemoTest {
     //this class is used to create the HTML report file
     ExtentHtmlReporter htmlReporter;
     //this will define a test enables adding logs, authors, test steps
-    ExtentTest extentTest;
-
     ExtentTest extentLogger;
 
     @BeforeMethod
@@ -47,6 +45,7 @@ public class ExtentDemoTest {
         extentLogger = report.createTest("TC342 Login as Driver Test");
 
         //testSteps
+        //info() --> write test steps
         extentLogger.info("Open chrome");
 
         extentLogger.info("go to url");
