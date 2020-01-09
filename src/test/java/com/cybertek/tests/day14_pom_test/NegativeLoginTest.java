@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class NegativeLoginTest extends TestBase {
 
     @Test
-    public void  wrongPPasswordTes(){
+    public void  wrongPasswordTest(){
         //name of the test for report
         extentLogger = report.createTest("Wrong Password Test");
 

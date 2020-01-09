@@ -51,6 +51,9 @@ public class CreateCalendarEventsPage extends BasePage {
     @FindBy(xpath = "(//input[@type='radio'])[5]")
     public WebElement by;
 
+    @FindBy(xpath = "//a[contains(@class,'btn back icons-holder-text')]")
+    public WebElement cancel;
+
     public Select repeatOptionsList(){
         return new Select(repeatOptions);
     }
