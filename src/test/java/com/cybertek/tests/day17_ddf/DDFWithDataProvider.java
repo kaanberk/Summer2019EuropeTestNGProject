@@ -18,10 +18,12 @@ public class DDFWithDataProvider {
         return data;
     }
 
+
     //get the data from data provider and pass as an argument
     @Test(dataProvider = "testData")
     public void test1(String tvshow,String rating){
 
         System.out.println("TvShow: "+tvshow+" has rating " +rating);
+        //
     }
 }
