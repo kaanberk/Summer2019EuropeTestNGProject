@@ -35,6 +35,8 @@ public class ExcelUtilsDemo {
             System.out.println(oneRow);
         }
 
+
+
         //get all data in 2d array
         String[][] dataArray = qa3short.getDataArray();
 
